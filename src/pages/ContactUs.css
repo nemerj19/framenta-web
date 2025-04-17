@@ -1,0 +1,25 @@
+/* ContactUs.css */
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}

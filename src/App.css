@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* index.css or App.css */
+body {
+  margin: 0;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: "Arial", sans-serif;
+}
+
+a {
+  color: #90caf9; /* Optional: nice blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
