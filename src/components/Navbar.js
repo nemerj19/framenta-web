@@ -1,24 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
       <nav className="navbar">
-        <h2 className="logo">
-          <Link to="/" className="logo-link">
+        <Link to="/" className="logo">
+          <div>
             <span className="logo-f">F</span>
             <span className="logo-rest">ramenta</span>
-          </Link>
-        </h2>
-        <button className="menu-button" onClick={() => setIsOpen(true)}>
-          ☰
-        </button>
+            <div className="logo-tagline">Web Design Services</div>
+          </div>
+        </Link>
+
+        {isMobile ? (
+          <button className="menu-button" onClick={() => setIsOpen(true)}>
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </button>
+        ) : (
+          <div className="desktop-links">
+            <Link to="/">Home</Link>
+            <Link to="/who-we-are">Who We Are</Link>
+            <Link to="/what-we-do">What We Do</Link>
+            <Link to="/our-work">Our Work</Link>
+            <Link to="/contact-us">Contact Us</Link>
+          </div>
+        )}
       </nav>
 
+      {/* Sidebar for mobile */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <button className="close-button" onClick={() => setIsOpen(false)}>
           ✕
@@ -40,7 +66,6 @@ function Navbar() {
         </Link>
       </div>
 
-      {/* Optional backdrop */}
       {isOpen && <div className="backdrop" onClick={() => setIsOpen(false)} />}
     </>
   );

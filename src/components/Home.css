@@ -4,8 +4,8 @@
   padding: 3rem;
   background: linear-gradient(
     135deg,
-    #6a11cb,
-    #2575fc
+    #000000,
+    #0a41a0
   ); /* Gradient Background */
   color: #fff;
   border-radius: 15px;
@@ -16,7 +16,6 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 

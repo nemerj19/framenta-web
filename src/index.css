@@ -15,7 +15,7 @@ code {
 /* Global Styles */
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #f06, #a2c2e2); /* Gradient background */
+  background: none; /* Remove gradient or any background */
   color: white;
   margin: 0;
   padding: 0;
@@ -41,4 +41,31 @@ button {
 
 button:hover {
   background-color: #2980b9;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: none; /* Optional, removes the gradient */
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensures body fills the viewport */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+.home-container {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure it takes the full height */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-page-section {
+  margin: 0;
+  padding: 0;
 }

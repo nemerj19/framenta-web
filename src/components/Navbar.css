@@ -109,3 +109,71 @@
   opacity: 0.8;
   transition: opacity 0.3s;
 }
+
+/* Desktop nav links */
+.desktop-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.desktop-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s;
+}
+
+.desktop-links a:hover {
+  color: #5eacff;
+}
+
+/* Hide mobile menu elements on desktop */
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .sidebar,
+  .backdrop {
+    display: none;
+  }
+
+  .desktop-links {
+    display: flex;
+  }
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 767px) {
+  .desktop-links {
+    display: none;
+  }
+}
+
+.menu-button .dot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 3px auto;
+}
+
+.logo-tagline {
+  font-size: 0.75rem;
+  color: #ccc;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+}
