@@ -5,6 +5,7 @@ import {
   FaShoppingCart,
   FaTachometerAlt,
   FaTools,
+  FaAppStoreIos,
 } from "react-icons/fa";
 import "./WhatWeDo.css";
 
@@ -56,6 +57,15 @@ function WhatWeDo() {
           <p>
             Our job doesn't end after launch. We offer ongoing support to keep
             your site running smoothly.
+          </p>
+        </div>
+
+        <div className="service-card">
+          <FaAppStoreIos size={40} color="#00dfc4" />
+          <h3 className="service-title">App Development</h3>
+          <p>
+            We build modern mobile applications for both Android and iOS
+            platforms with seamless performance and sleek design.
           </p>
         </div>
       </div>

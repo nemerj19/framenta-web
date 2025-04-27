@@ -89,3 +89,56 @@
 .tech-icons svg[title="GitHub"] {
   color: #ffffff; /* Or use #333 or #6e5494 if you prefer the GitHub brand tone */
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.tech-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  color: #ff9b4f; /* or your accent color */
+}
+
+.tech-icons svg:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.what-we-offer {
+  margin-bottom: 4rem; /* Adds space below this section */
+}
+
+.about-us {
+  margin-bottom: 4rem; /* Optional: if you want space before the next */
+}
+
+.features-section,
+.about-preview,
+.tech-stack {
+  margin-bottom: 3rem; /* or adjust as you like */
+}
+
+.logo-f {
+  color: #ff6a00; /* orange/red or pick your color */
+  font-weight: bold;
+}
+
+.logo-rest {
+  color: #a1b0ff; /* bluish or secondary tone */
+  font-weight: bold;
+}

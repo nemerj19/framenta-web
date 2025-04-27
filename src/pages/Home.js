@@ -1,10 +1,17 @@
 import React from "react";
 import PageLayout from "../components/PageLayout";
 import "../components/Home.css";
-import { MdCode } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaLaptopCode,
+  FaPalette,
+  FaMobileAlt,
+} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -12,17 +19,20 @@ function Home() {
 
   return (
     <PageLayout>
-      <div className="home-container">
-        <h1 className="hero-title">
-          Welcome to Framenta{" "}
-          <MdCode style={{ marginLeft: "10px", color: "#ffffff" }} />
+      <div className="welcome-card">
+        <h1>
+          Welcome to <span className="logo-f">F</span>
+          <span className="logo-rest">ramenta.</span>
         </h1>
-        <p className="hero-description">
-          We build modern, responsive websites tailored to your business.
-        </p>
-        <button className="cta-button" onClick={() => navigate("/contact-us")}>
-          Get Started
-        </button>
+
+        <p>Transforming ideas into interactive web experiences.</p>
+
+        {/* Add Icons Section */}
+        <div className="tech-icons">
+          <FaLaptopCode size={30} />
+          <FaMobileAlt size={30} />
+          <FaPalette size={30} />
+        </div>
       </div>
 
       <section className="features-section">
@@ -69,6 +79,19 @@ function Home() {
           <FaGithub title="GitHub" />
         </div>
       </section>
+
+      <a
+        href="https://wa.me/966576404358" // Example: https://wa.me/966501234567
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+          alt="WhatsApp"
+          className="whatsapp-icon"
+        />
+      </a>
 
       <section className="cta-footer">
         <h2>Let’s Build Something Amazing</h2>
