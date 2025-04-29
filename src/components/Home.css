@@ -142,3 +142,62 @@
   color: #a1b0ff; /* bluish or secondary tone */
   font-weight: bold;
 }
+
+.hero-video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20vh;
+  color: white;
+  backdrop-filter: blur(2px);
+}
+
+.video-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.video-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-card h1 {
+  font-size: 2rem; /* Try 2rem or smaller based on how compact you want it */
+  margin-bottom: 0.5rem; /* Optional: tighter spacing */
+}
+
+.welcome-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.hero-video-container {
+  width: 100%;
+  height: 60vh; /* adjust based on design */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-video {
+  width: 100%;
+  height: 70%;
+  object-fit: cover; /* removes black borders by cropping if needed */
+}

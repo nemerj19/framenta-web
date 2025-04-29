@@ -3,15 +3,7 @@ import PageLayout from "../components/PageLayout";
 import "../components/Home.css";
 import { FaGithub } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaLaptopCode,
-  FaPalette,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -19,21 +11,28 @@ function Home() {
 
   return (
     <PageLayout>
-      <div className="welcome-card">
-        <h1>
-          Welcome to <span className="logo-f">F</span>
-          <span className="logo-rest">ramenta.</span>
-        </h1>
-
-        <p>Transforming ideas into interactive web experiences.</p>
-
-        {/* Add Icons Section */}
-        <div className="tech-icons">
-          <FaLaptopCode size={30} />
-          <FaMobileAlt size={30} />
-          <FaPalette size={30} />
-        </div>
+      <div className="hero-video-container">
+        <video autoPlay muted loop className="hero-video">
+          <source src="/intro.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
+
+      {/* <div className="welcome-card video-overlay">
+          <h1>
+            Welcome to{" "}
+            <span className="highlight">
+              <span className="logo-f">F</span>
+              <span className="logo-rest">ramenta.</span>
+            </span>
+          </h1>
+          <p>Transforming ideas into interactive web experiences.</p>
+          <div className="tech-icons">
+            <FaLaptopCode size={30} />
+            <FaMobileAlt size={30} />
+            <FaPalette size={30} />
+          </div>
+        </div> */}
 
       <section className="features-section">
         <h2>What We Offer</h2>
