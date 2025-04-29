@@ -6,7 +6,7 @@ function Home() {
     <PageLayout>
       <h1>Who We Are?</h1>
       <img
-        src="/images/team.png"
+        src="/images/team.jpg"
         alt="Our Team"
         style={{ maxWidth: "100%", borderRadius: "10px" }}
       />
