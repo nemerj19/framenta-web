@@ -5,18 +5,20 @@ import { FaGithub } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import HeroSlider from "../components/HeroSlider";
 
 function Home() {
   const navigate = useNavigate();
 
   return (
     <PageLayout>
-      <div className="hero-video-container">
+      <HeroSlider />
+      {/* <div className="hero-video-container">
         <video autoPlay muted loop playsInline className="hero-video">
           <source src="/introo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div> */}
 
       {/* <div className="welcome-card video-overlay">
           <h1>
