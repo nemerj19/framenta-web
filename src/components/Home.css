@@ -271,7 +271,7 @@
 
 .design-card {
   flex: 1 1 300px;
-  background: linear-gradient(135deg, #de6000, #28004f); /* Default gradient */
+  background: linear-gradient(135deg, #7c39cd, #003984); /* Default gradient */
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -310,4 +310,69 @@
 
 .design-card button:hover {
   background: #f0f0f0;
+}
+
+.hero-slider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .slide-image {
+    height: 350px; /* Adjust as needed */
+    object-fit: cover;
+  }
+}
+
+.offer-section {
+  padding-left: 40;
+}
+
+@media (min-width: 768px) {
+  .offer-section {
+    padding-left: 40px;
+  }
+}
+
+.offer-inner {
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .offer-inner {
+    padding-left: 40px;
+  }
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.home-offer {
+  height: 5vh; /* full screen height */
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  text-align: center; /* centers text inside the element */
+}
+
+.home-offer h2 {
+  font-size: 1.5rem;
+  color: #ffffff; /* or any color that fits your theme */
 }

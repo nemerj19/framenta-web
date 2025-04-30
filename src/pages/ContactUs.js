@@ -1,20 +1,20 @@
 import React from "react";
-import PageLayout from "../components/PageLayout";
+//import PageLayout from "../components/PageLayout";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import "./ContactUs.css";
 
 function ContactUs() {
   return (
-    <PageLayout>
+    <div className="contact-container">
       <h1>Contact Us</h1>
 
       {/* Contact Info Section */}
       <div
         style={{
-          marginBottom: "2rem",
+          marginBottom: "1rem",
           display: "flex",
           flexDirection: "column",
-          gap: "1rem",
+          gap: "0.5rem",
         }}
       >
         <p>
@@ -47,7 +47,7 @@ function ContactUs() {
         <textarea name="message" placeholder="Your Message" rows="5" required />
         <button type="submit">Send</button>
       </form>
-    </PageLayout>
+    </div>
   );
 }
 

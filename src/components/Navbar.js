@@ -20,11 +20,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          <div>
-            <span className="logo-f">F</span>
-            <span className="logo-rest">ramenta</span>
-            <div className="logo-tagline">Web Design Services</div>
-          </div>
+          Framenta
         </Link>
 
         {isMobile ? (

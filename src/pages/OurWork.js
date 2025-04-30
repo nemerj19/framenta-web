@@ -1,9 +1,9 @@
 import React from "react";
-import PageLayout from "../components/PageLayout";
+//import PageLayout from "../components/PageLayout";
 
 function OurWork() {
   return (
-    <PageLayout>
+    <>
       <h2 style={{ marginBottom: "1rem" }}>Our Work</h2>
       <div
         style={{
@@ -93,7 +93,7 @@ function OurWork() {
           </a>
         </div>
       </div>
-    </PageLayout>
+    </>
   );
 }
 

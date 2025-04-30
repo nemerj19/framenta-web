@@ -1,113 +1,125 @@
 import React from "react";
-import PageLayout from "../components/PageLayout";
+//import PageLayout from "../components/PageLayout";
 import "../components/Home.css";
 import { FaGithub } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import HeroSlider from "../components/HeroSlider";
+//import HeroSlider from "../components/HeroSlider";
 
 function Home() {
   const navigate = useNavigate();
 
   return (
-    <PageLayout>
-      <HeroSlider />
+    <>
+      <div className="hero-image-wrapper">
+        <img
+          src="/images/front.png" // update this path to your image
+          alt="Framenta - Creative Web Design"
+          className="hero-image"
+        />
+      </div>
 
-      <section className="features-section spaced-section">
-        <h2>What We Offer</h2>
-        <ul>
-          <li>🚀 Fast, SEO-optimized websites</li>
-          <li>🎨 Custom UI/UX design for a seamless user experience</li>
-          <li>📱 Fully responsive mobile-friendly layouts</li>
-          <li>🔍 Search Engine Optimization (SEO)</li>
-          <li>⚙️ Front-end development with modern JavaScript frameworks</li>
-          <li>🛠️ Maintenance and support after launch</li>
-          <div className="web-design-cards">
-            <div className="design-card">
-              <h3>Basic Web Design</h3>
-              <ul>
-                <li> Choose from prebuilt creative designs</li>
-                <li> Edit chosen design</li>
-                <li> Design simple logo</li>
-                <li> Build site content</li>
-              </ul>
-              <button
-                className="inquiry-button"
-                onClick={() => navigate("/contact-us")}
-              >
-                Make an Inquiry
-              </button>
-            </div>
+      <section className="features-section spaced-section offer-section">
+        <div className="home-offer">
+          <h2>Our All Services</h2>
+          {/* <ul>
+            <li>🚀 Fast, SEO-optimized websites</li>
+            <li>🎨 Custom UI/UX design for a seamless user experience</li>
+            <li>📱 Fully responsive mobile-friendly layouts</li>
+            <li>🔍 Search Engine Optimization (SEO)</li>
+            <li>⚙️ Front-end development with modern JavaScript frameworks</li>
+            <li>🛠️ Maintenance and support after launch</li>
+          </ul> */}
+        </div>
 
-            <div className="design-card">
-              <h3>Advanced Web Design</h3>
-              <ul>
-                <li> Custom creative design for homepage</li>
-                <li> Logo design</li>
-                <li> Build site content</li>
-                <li> Build professional forms</li>
-              </ul>
-              <button
-                className="inquiry-button"
-                onClick={() => navigate("/contact-us")}
-              >
-                Make an Inquiry
-              </button>
-            </div>
-            <div className="design-card">
-              <h3>UI/UX Design</h3>
-              <ul>
-                <li> Research-driven interface design</li>
-                <li> User journey mapping</li>
-                <li> Wireframes and mockups</li>
-                <li> Pixel-perfect visual design</li>
-              </ul>
-              <button
-                className="inquiry-button"
-                onClick={() => navigate("/contact-us")}
-              >
-                Make an Inquiry
-              </button>
-            </div>
-
-            <div className="design-card">
-              <h3>Domain & Hosting</h3>
-              <ul>
-                <li> Help register your domain</li>
-                <li> Fast & secure hosting setup</li>
-                <li> Free SSL certificate</li>
-                <li> Website backups & support</li>
-              </ul>
-              <button
-                className="inquiry-button"
-                onClick={() => navigate("/contact-us")}
-              >
-                Make an Inquiry
-              </button>
-            </div>
-            <div className="design-card seo-card">
-              <h3>SEO Services</h3>
-              <ul>
-                <li>Comprehensive website audit</li>
-                <li>On-page & off-page optimization</li>
-                <li>Keyword research & analysis</li>
-                <li>Google Search Console setup</li>
-              </ul>
-              <button onClick={() => navigate("/contact-us")}>Inquire</button>
-            </div>
-            <div className="design-card app-card">
-              <h3>App Development</h3>
-              <ul>
-                <li>Cross-platform mobile apps</li>
-                <li>Intuitive UI/UX design</li>
-                <li>Backend integration</li>
-                <li>App store deployment</li>
-              </ul>
-              <button onClick={() => navigate("/contact-us")}>Inquire</button>
-            </div>
+        <div className="web-design-cards">
+          <div className="design-card">
+            <h3>Basic Web Design</h3>
+            <ul>
+              <li>Choose from prebuilt creative designs</li>
+              <li>Edit chosen design</li>
+              <li>Design simple logo</li>
+              <li>Build site content</li>
+            </ul>
+            <button
+              className="inquiry-button"
+              onClick={() => navigate("/contact-us")}
+            >
+              Inquire
+            </button>
           </div>
-        </ul>
+
+          <div className="design-card">
+            <h3>Advanced Web Design</h3>
+            <ul>
+              <li>Custom creative design for homepage</li>
+              <li>Logo design</li>
+              <li>Build site content</li>
+              <li>Build professional forms</li>
+            </ul>
+            <button
+              className="inquiry-button"
+              onClick={() => navigate("/contact-us")}
+            >
+              Inquire
+            </button>
+          </div>
+
+          <div className="design-card">
+            <h3>UI/UX Design</h3>
+            <ul>
+              <li>Research-driven interface design</li>
+              <li>User journey mapping</li>
+              <li>Wireframes and mockups</li>
+              <li>Pixel-perfect visual design</li>
+            </ul>
+            <button
+              className="inquiry-button"
+              onClick={() => navigate("/contact-us")}
+            >
+              Inquire
+            </button>
+          </div>
+
+          <div className="design-card">
+            <h3>Domain & Hosting</h3>
+            <ul>
+              <li>Help register your domain</li>
+              <li>Fast & secure hosting setup</li>
+              <li>Free SSL certificate</li>
+              <li>Website backups & support</li>
+            </ul>
+            <button
+              className="inquiry-button"
+              onClick={() => navigate("/contact-us")}
+            >
+              Inquire
+            </button>
+          </div>
+
+          <div className="design-card seo-card">
+            <h3>SEO Services</h3>
+            <ul>
+              <li>Comprehensive website audit</li>
+              <li>On-page & off-page optimization</li>
+              <li>Keyword research & analysis</li>
+              <li>Google Search Console setup</li>
+            </ul>
+            <button onClick={() => navigate("/contact-us")}>Inquire</button>
+          </div>
+
+          <div className="design-card app-card">
+            <h3>App Development</h3>
+            <ul>
+              <li>Cross-platform mobile apps</li>
+              <li>Intuitive UI/UX design</li>
+              <li>Backend integration</li>
+              <li>App store deployment</li>
+            </ul>
+            <button onClick={() => navigate("/contact-us")}>Inquire</button>
+          </div>
+        </div>
       </section>
 
       <section className="about-preview">
@@ -165,7 +177,7 @@ function Home() {
       <footer className="footer-note">
         Made with <span className="heart">♥</span> in Riyadh
       </footer>
-    </PageLayout>
+    </>
   );
 }
 

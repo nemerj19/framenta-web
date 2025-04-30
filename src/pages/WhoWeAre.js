@@ -1,9 +1,9 @@
 import React from "react";
-import PageLayout from "../components/PageLayout";
+//import PageLayout from "../components/PageLayout";
 
 function Home() {
   return (
-    <PageLayout>
+    <>
       <h1>Who We Are?</h1>
       <img
         src="/images/team.jpg"
@@ -24,7 +24,7 @@ function Home() {
         with you to transform your ideas into engaging digital experiences that
         stand out in today’s competitive market."
       </p>
-    </PageLayout>
+    </>
   );
 }
 

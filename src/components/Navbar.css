@@ -1,8 +1,8 @@
 /* Navbar container */
 .navbar {
-  background-color: #0e0041;
+  background-color: #6535c4;
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,7 @@
   font-size: 1.8rem;
   font-family: "Poppins", sans-serif; /* or whichever font you chose */
   font-weight: 600; /* adjust for boldness */
-  color: #5eacff; /* try a standout color */
+  color: #ffffff; /* try a standout color */
   letter-spacing: 1px; /* optional: for spacing effect */
 }
 
@@ -96,14 +96,6 @@
   font-size: 1.8rem;
 }
 
-.logo-f {
-  color: #ff6a00; /* red */
-}
-
-.logo-rest {
-  color: #a1b0ff; /* teal */
-}
-
 .logo-link:hover .logo-f,
 .logo-link:hover .logo-rest {
   opacity: 0.8;
@@ -169,11 +161,10 @@
 }
 
 .logo {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   text-decoration: none;
   line-height: 1.2;
+  color: #f9a968; /* ✅ set your desired color here */
 }
