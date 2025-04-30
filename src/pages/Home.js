@@ -86,6 +86,26 @@ function Home() {
                 Make an Inquiry
               </button>
             </div>
+            <div className="design-card seo-card">
+              <h3>SEO Services</h3>
+              <ul>
+                <li>Comprehensive website audit</li>
+                <li>On-page & off-page optimization</li>
+                <li>Keyword research & analysis</li>
+                <li>Google Search Console setup</li>
+              </ul>
+              <button onClick={() => navigate("/contact-us")}>Inquire</button>
+            </div>
+            <div className="design-card app-card">
+              <h3>App Development</h3>
+              <ul>
+                <li>Cross-platform mobile apps</li>
+                <li>Intuitive UI/UX design</li>
+                <li>Backend integration</li>
+                <li>App store deployment</li>
+              </ul>
+              <button onClick={() => navigate("/contact-us")}>Inquire</button>
+            </div>
           </div>
         </ul>
       </section>
