@@ -13,30 +13,8 @@ function Home() {
   return (
     <PageLayout>
       <HeroSlider />
-      {/* <div className="hero-video-container">
-        <video autoPlay muted loop playsInline className="hero-video">
-          <source src="/introo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
 
-      {/* <div className="welcome-card video-overlay">
-          <h1>
-            Welcome to{" "}
-            <span className="highlight">
-              <span className="logo-f">F</span>
-              <span className="logo-rest">ramenta.</span>
-            </span>
-          </h1>
-          <p>Transforming ideas into interactive web experiences.</p>
-          <div className="tech-icons">
-            <FaLaptopCode size={30} />
-            <FaMobileAlt size={30} />
-            <FaPalette size={30} />
-          </div>
-        </div> */}
-
-      <section className="features-section">
+      <section className="features-section spaced-section">
         <h2>What We Offer</h2>
         <ul>
           <li>🚀 Fast, SEO-optimized websites</li>
@@ -45,6 +23,70 @@ function Home() {
           <li>🔍 Search Engine Optimization (SEO)</li>
           <li>⚙️ Front-end development with modern JavaScript frameworks</li>
           <li>🛠️ Maintenance and support after launch</li>
+          <div className="web-design-cards">
+            <div className="design-card">
+              <h3>Basic Web Design</h3>
+              <ul>
+                <li> Choose from prebuilt creative designs</li>
+                <li> Edit chosen design</li>
+                <li> Design simple logo</li>
+                <li> Build site content</li>
+              </ul>
+              <button
+                className="inquiry-button"
+                onClick={() => navigate("/contact-us")}
+              >
+                Make an Inquiry
+              </button>
+            </div>
+
+            <div className="design-card">
+              <h3>Advanced Web Design</h3>
+              <ul>
+                <li> Custom creative design for homepage</li>
+                <li> Logo design</li>
+                <li> Build site content</li>
+                <li> Build professional forms</li>
+              </ul>
+              <button
+                className="inquiry-button"
+                onClick={() => navigate("/contact-us")}
+              >
+                Make an Inquiry
+              </button>
+            </div>
+            <div className="design-card">
+              <h3>UI/UX Design</h3>
+              <ul>
+                <li> Research-driven interface design</li>
+                <li> User journey mapping</li>
+                <li> Wireframes and mockups</li>
+                <li> Pixel-perfect visual design</li>
+              </ul>
+              <button
+                className="inquiry-button"
+                onClick={() => navigate("/contact-us")}
+              >
+                Make an Inquiry
+              </button>
+            </div>
+
+            <div className="design-card">
+              <h3>Domain & Hosting</h3>
+              <ul>
+                <li> Help register your domain</li>
+                <li> Fast & secure hosting setup</li>
+                <li> Free SSL certificate</li>
+                <li> Website backups & support</li>
+              </ul>
+              <button
+                className="inquiry-button"
+                onClick={() => navigate("/contact-us")}
+              >
+                Make an Inquiry
+              </button>
+            </div>
+          </div>
         </ul>
       </section>
 
