@@ -4,40 +4,44 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Framenta
+          <div>
+            <span className="logo-rest">Framenta</span>
+          </div>
         </Link>
 
-        {isMobile ? (
-          <button className="menu-button" onClick={() => setIsOpen(true)}>
-            <span className="dot"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </button>
-        ) : (
-          <div className="desktop-links">
-            <Link to="/">Home</Link>
-            <Link to="/who-we-are">Who We Are</Link>
-            <Link to="/what-we-do">What We Do</Link>
-            <Link to="/our-work">Our Work</Link>
-            <Link to="/contact-us">Contact Us</Link>
-          </div>
-        )}
+        <div className="desktop-links">
+          <Link to="/">Home</Link>
+          <Link to="/who-we-are">Who We Are</Link>
+          <Link to="/what-we-do">What We Do</Link>
+          <Link to="/our-work">Our Work</Link>
+          <Link to="/contact-us">Contact Us</Link>
+        </div>
       </nav>
 
       {/* Sidebar for mobile */}

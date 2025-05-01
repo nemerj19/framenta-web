@@ -15,7 +15,7 @@ function OurWork() {
         {/* Project 1: To-Do App */}
         <div
           style={{
-            backgroundColor: "#1e1e1e",
+            backgroundColor: "#2f2591",
             borderRadius: "8px",
             padding: "1rem",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)",
@@ -41,7 +41,7 @@ function OurWork() {
         {/* Project 2 */}
         <div
           style={{
-            backgroundColor: "#1e1e1e",
+            backgroundColor: "#2f2591",
             borderRadius: "8px",
             padding: "1rem",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)",
@@ -67,7 +67,7 @@ function OurWork() {
         {/* Project 3 */}
         <div
           style={{
-            backgroundColor: "#1e1e1e",
+            backgroundColor: "#2f2591",
             borderRadius: "8px",
             padding: "1rem",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)",

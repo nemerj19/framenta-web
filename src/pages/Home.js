@@ -1,11 +1,8 @@
 import React from "react";
-//import PageLayout from "../components/PageLayout";
 import "../components/Home.css";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-//import HeroSlider from "../components/HeroSlider";
 
 function Home() {
   const navigate = useNavigate();
@@ -14,136 +11,111 @@ function Home() {
     <>
       <div className="hero-image-wrapper">
         <img
-          src="/images/front.png" // update this path to your image
+          src="/images/front.png"
           alt="Framenta - Creative Web Design"
           className="hero-image"
         />
       </div>
 
-      <section className="features-section spaced-section offer-section">
+      <section className="features-section spaced-section offer-section center-content">
         <div className="home-offer">
-          <h2>Our All Services</h2>
-          {/* <ul>
-            <li>🚀 Fast, SEO-optimized websites</li>
-            <li>🎨 Custom UI/UX design for a seamless user experience</li>
-            <li>📱 Fully responsive mobile-friendly layouts</li>
-            <li>🔍 Search Engine Optimization (SEO)</li>
-            <li>⚙️ Front-end development with modern JavaScript frameworks</li>
-            <li>🛠️ Maintenance and support after launch</li>
-          </ul> */}
+          <h2>Our Services</h2>
         </div>
 
         <div className="web-design-cards">
-          <div className="design-card">
-            <h3>Basic Web Design</h3>
-            <ul>
-              <li>Choose from prebuilt creative designs</li>
-              <li>Edit chosen design</li>
-              <li>Design simple logo</li>
-              <li>Build site content</li>
-            </ul>
-            <button
-              className="inquiry-button"
-              onClick={() => navigate("/contact-us")}
-            >
-              Inquire
-            </button>
-          </div>
-
-          <div className="design-card">
-            <h3>Advanced Web Design</h3>
-            <ul>
-              <li>Custom creative design for homepage</li>
-              <li>Logo design</li>
-              <li>Build site content</li>
-              <li>Build professional forms</li>
-            </ul>
-            <button
-              className="inquiry-button"
-              onClick={() => navigate("/contact-us")}
-            >
-              Inquire
-            </button>
-          </div>
-
-          <div className="design-card">
-            <h3>UI/UX Design</h3>
-            <ul>
-              <li>Research-driven interface design</li>
-              <li>User journey mapping</li>
-              <li>Wireframes and mockups</li>
-              <li>Pixel-perfect visual design</li>
-            </ul>
-            <button
-              className="inquiry-button"
-              onClick={() => navigate("/contact-us")}
-            >
-              Inquire
-            </button>
-          </div>
-
-          <div className="design-card">
-            <h3>Domain & Hosting</h3>
-            <ul>
-              <li>Help register your domain</li>
-              <li>Fast & secure hosting setup</li>
-              <li>Free SSL certificate</li>
-              <li>Website backups & support</li>
-            </ul>
-            <button
-              className="inquiry-button"
-              onClick={() => navigate("/contact-us")}
-            >
-              Inquire
-            </button>
-          </div>
-
-          <div className="design-card seo-card">
-            <h3>SEO Services</h3>
-            <ul>
-              <li>Comprehensive website audit</li>
-              <li>On-page & off-page optimization</li>
-              <li>Keyword research & analysis</li>
-              <li>Google Search Console setup</li>
-            </ul>
-            <button onClick={() => navigate("/contact-us")}>Inquire</button>
-          </div>
-
-          <div className="design-card app-card">
-            <h3>App Development</h3>
-            <ul>
-              <li>Cross-platform mobile apps</li>
-              <li>Intuitive UI/UX design</li>
-              <li>Backend integration</li>
-              <li>App store deployment</li>
-            </ul>
-            <button onClick={() => navigate("/contact-us")}>Inquire</button>
-          </div>
+          {/* Service Cards */}
+          {[
+            {
+              title: "Basic Web Design",
+              features: [
+                "Choose from prebuilt creative designs",
+                "Edit chosen design",
+                "Design simple logo",
+                "Build site content",
+              ],
+            },
+            {
+              title: "Advanced Web Design",
+              features: [
+                "Custom creative design for homepage",
+                "Logo design",
+                "Build site content",
+                "Build professional forms",
+              ],
+            },
+            {
+              title: "UI/UX Design",
+              features: [
+                "Research-driven interface design",
+                "User journey mapping",
+                "Wireframes and mockups",
+                "Pixel-perfect visual design",
+              ],
+            },
+            {
+              title: "Domain & Hosting",
+              features: [
+                "Help register your domain",
+                "Fast & secure hosting setup",
+                "Free SSL certificate",
+                "Website backups & support",
+              ],
+            },
+            {
+              title: "SEO Services",
+              features: [
+                "Comprehensive website audit",
+                "On-page & off-page optimization",
+                "Keyword research & analysis",
+                "Google Search Console setup",
+              ],
+            },
+            {
+              title: "App Development",
+              features: [
+                "Cross-platform mobile apps",
+                "Intuitive UI/UX design",
+                "Backend integration",
+                "App store deployment",
+              ],
+            },
+          ].map((card, idx) => (
+            <div key={idx} className="design-card">
+              <h3>{card.title}</h3>
+              <ul>
+                {card.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+              <button
+                className="inquiry-button"
+                onClick={() => navigate("/contact-us")}
+              >
+                Inquire
+              </button>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="about-preview">
+      <section className="about-preview center-content">
         <h2>About Us</h2>
         <p>
           Framenta is a web development studio focused on turning your ideas
-          into beautifully interactive websites. We blend creativity and code to
-          craft experiences that engage users and grow your business.
+          into beautifully interactive websites.
         </p>
         <p>
           Our team specializes in modern front-end technologies, building
           responsive, lightning-fast websites that not only look stunning but
-          also perform seamlessly across all devices. Whether you're a startup,
-          a growing business, or an established brand, we work closely with you
-          to bring your vision to life with precision and passion.
+          also perform seamlessly across all devices.
         </p>
         <p>
           At Framenta, every line of code is written with care, every layout is
-          pixel-perfect, and every interaction is purposeful. Your goals are our
-          blueprint — let’s build something remarkable together.
+          pixel-perfect, and every interaction is purposeful.
         </p>
       </section>
 
-      <section className="tech-stack">
+      <section className="centered-section center-content">
         <h2>Technologies We Use</h2>
         <div className="tech-icons">
           <FaHtml5 title="HTML5" />
@@ -156,7 +128,7 @@ function Home() {
       </section>
 
       <a
-        href="https://wa.me/966576404358" // Example: https://wa.me/966501234567
+        href="https://wa.me/966576404358"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
@@ -168,14 +140,44 @@ function Home() {
         />
       </a>
 
-      <section className="cta-footer">
-        <h2>Let’s Build Something Amazing</h2>
-        <button className="cta-button" onClick={() => navigate("/contact-us")}>
-          Contact Us
-        </button>
+      <section className="our-work-card-section">
+        <h2>Our Work</h2>
+        <div className="our-work-card">
+          <h3>Check Out Our Projects</h3>
+          <p>
+            We take pride in delivering modern, responsive, and user-friendly
+            websites. Explore our featured work to see the creativity and
+            functionality we bring to life.
+          </p>
+          <button onClick={() => navigate("/our-work")}>View Projects</button>
+        </div>
       </section>
-      <footer className="footer-note">
+
+      <section className="home-contact-form center-content">
+        <h2 style={{ marginBottom: "1rem" }}>
+          Need a Website, Contact Us Today !
+        </h2>
+        <form
+          action="https://formspree.io/f/xblgelrb"
+          method="POST"
+          className="contact-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="phone" name="phone" placeholder="Your Phone" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          />
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <footer className="footer-note center-content">
         Made with <span className="heart">♥</span> in Riyadh
+        <div style={{ marginTop: "1rem", fontWeight: "bold" }}></div>
       </footer>
     </>
   );
