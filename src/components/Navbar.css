@@ -1,35 +1,31 @@
-/* Always visible and fixed navbar */
+/* Navbar Container */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #6535c4;
+  background-color: #7323aa;
   color: white;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  position: fixed;
+  width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo */
-.logo {
+/* Logo text style */
+.logo-rest {
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-
   font-weight: 600;
-  color: white;
+  color: white; /* Default color of the logo text */
   text-decoration: none;
 }
 
-/* Nav links with spacing */
-.desktop-links {
-  display: flex;
-  gap: 2.5rem; /* space between links */
+/* If you want hover effect on the logo */
+.logo-rest:hover {
+  color: #00bfff; /* Change to any color you prefer */
 }
 
+/* Adjust navbar links if necessary */
 .desktop-links a {
   color: white;
   text-decoration: none;
@@ -40,4 +36,68 @@
 
 .desktop-links a:hover {
   color: #5eacff;
+}
+
+/* Mobile Hamburger Icon */
+.hamburger-icon {
+  display: none; /* Hide on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .desktop-links {
+    display: none; /* Hide links on mobile */
+  }
+
+  .hamburger-icon {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Position it off-screen initially */
+    width: 250px;
+    height: 100%;
+    background-color: #7323aa;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+  }
+
+  .sidebar.open {
+    right: 0; /* Slide it in when open */
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    background-color: #5eacff;
+  }
+
+  /* Backdrop */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
 }

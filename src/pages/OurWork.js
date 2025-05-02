@@ -4,7 +4,18 @@ import React from "react";
 function OurWork() {
   return (
     <>
-      <h2 style={{ marginBottom: "1rem" }}>Our Work</h2>
+      <h2
+        style={{
+          marginTop: "4rem",
+          marginBottom: "1.5rem",
+          textAlign: "center",
+          fontSize: "2.5rem",
+          color: "#ffffff",
+        }}
+      >
+        Our Work
+      </h2>
+
       <div
         style={{
           display: "grid",

@@ -12,7 +12,7 @@ import "./WhatWeDo.css";
 function WhatWeDo() {
   return (
     <div className="whatwedo-container">
-      <h2 className="whatwedo-title">What We Do</h2>
+      <h2 className="whatwedo-title">Our Services</h2>
 
       <div className="services-grid">
         <div className="service-card">

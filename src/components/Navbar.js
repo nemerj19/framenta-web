@@ -1,72 +1,75 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  // Toggle the mobile menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scrolling down
-        setShowNavbar(false);
-      } else {
-        // Scrolling up
-        setShowNavbar(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  // Close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
           <div>
-            <span className="logo-rest">Framenta</span>
+            <span className="logo-rest">framenta</span>
           </div>
         </Link>
 
         <div className="desktop-links">
-          <Link to="/">Home</Link>
-          <Link to="/who-we-are">Who We Are</Link>
-          <Link to="/what-we-do">What We Do</Link>
-          <Link to="/our-work">Our Work</Link>
-          <Link to="/contact-us">Contact Us</Link>
+          <Link to="/" onClick={closeMenu}>
+            Home
+          </Link>
+          <Link to="/who-we-are" onClick={closeMenu}>
+            About Us
+          </Link>
+          <Link to="/what-we-do" onClick={closeMenu}>
+            Our Services
+          </Link>
+          <Link to="/our-work" onClick={closeMenu}>
+            Our Work
+          </Link>
+          <Link to="/contact-us" onClick={closeMenu}>
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Icon */}
+        <div className="hamburger-icon" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
       </nav>
 
       {/* Sidebar for mobile */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <button className="close-button" onClick={() => setIsOpen(false)}>
-          ✕
-        </button>
-        <Link to="/" onClick={() => setIsOpen(false)}>
+        <Link to="/" onClick={closeMenu}>
           Home
         </Link>
-        <Link to="/who-we-are" onClick={() => setIsOpen(false)}>
-          Who We Are
+        <Link to="/who-we-are" onClick={closeMenu}>
+          About Us
         </Link>
-        <Link to="/what-we-do" onClick={() => setIsOpen(false)}>
-          What We Do
+        <Link to="/what-we-do" onClick={closeMenu}>
+          Our Services
         </Link>
-        <Link to="/our-work" onClick={() => setIsOpen(false)}>
+        <Link to="/our-work" onClick={closeMenu}>
           Our Work
         </Link>
-        <Link to="/contact-us" onClick={() => setIsOpen(false)}>
+        <Link to="/contact-us" onClick={closeMenu}>
           Contact Us
         </Link>
       </div>
 
-      {isOpen && <div className="backdrop" onClick={() => setIsOpen(false)} />}
+      {isOpen && <div className="backdrop" onClick={toggleMenu} />}
     </>
   );
 }

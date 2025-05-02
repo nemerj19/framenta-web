@@ -11,7 +11,7 @@ function Home() {
     <>
       <div className="hero-image-wrapper">
         <img
-          src="/images/front.png"
+          src="/images/frontt.png"
           alt="Framenta - Creative Web Design"
           className="hero-image"
         />
