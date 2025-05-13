@@ -3,9 +3,68 @@ import "../components/Home.css";
 import { FaGithub, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const serviceCards = [
+    {
+      title: t("services.basic.title"),
+      features: [
+        t("services.basic.feature1"),
+        t("services.basic.feature2"),
+        t("services.basic.feature3"),
+        t("services.basic.feature4"),
+      ],
+    },
+    {
+      title: t("services.advanced.title"),
+      features: [
+        t("services.advanced.feature1"),
+        t("services.advanced.feature2"),
+        t("services.advanced.feature3"),
+        t("services.advanced.feature4"),
+      ],
+    },
+    {
+      title: t("services.uiux.title"),
+      features: [
+        t("services.uiux.feature1"),
+        t("services.uiux.feature2"),
+        t("services.uiux.feature3"),
+        t("services.uiux.feature4"),
+      ],
+    },
+    {
+      title: t("services.domain.title"),
+      features: [
+        t("services.domain.feature1"),
+        t("services.domain.feature2"),
+        t("services.domain.feature3"),
+        t("services.domain.feature4"),
+      ],
+    },
+    {
+      title: t("services.seo.title"),
+      features: [
+        t("services.seo.feature1"),
+        t("services.seo.feature2"),
+        t("services.seo.feature3"),
+        t("services.seo.feature4"),
+      ],
+    },
+    {
+      title: t("services.app.title"),
+      features: [
+        t("services.app.feature1"),
+        t("services.app.feature2"),
+        t("services.app.feature3"),
+        t("services.app.feature4"),
+      ],
+    },
+  ];
 
   return (
     <>
@@ -19,67 +78,11 @@ function Home() {
 
       <section className="features-section spaced-section offer-section center-content">
         <div className="home-offer">
-          <h2>Our Services</h2>
+          <h2>{t("home.servicesTitle")}</h2>
         </div>
 
         <div className="web-design-cards">
-          {/* Service Cards */}
-          {[
-            {
-              title: "Basic Web Design",
-              features: [
-                "Choose from prebuilt creative designs",
-                "Edit chosen design",
-                "Design simple logo",
-                "Build site content",
-              ],
-            },
-            {
-              title: "Advanced Web Design",
-              features: [
-                "Custom creative design for homepage",
-                "Logo design",
-                "Build site content",
-                "Build professional forms",
-              ],
-            },
-            {
-              title: "UI/UX Design",
-              features: [
-                "Research-driven interface design",
-                "User journey mapping",
-                "Wireframes and mockups",
-                "Pixel-perfect visual design",
-              ],
-            },
-            {
-              title: "Domain & Hosting",
-              features: [
-                "Help register your domain",
-                "Fast & secure hosting setup",
-                "Free SSL certificate",
-                "Website backups & support",
-              ],
-            },
-            {
-              title: "SEO Services",
-              features: [
-                "Comprehensive website audit",
-                "On-page & off-page optimization",
-                "Keyword research & analysis",
-                "Google Search Console setup",
-              ],
-            },
-            {
-              title: "App Development",
-              features: [
-                "Cross-platform mobile apps",
-                "Intuitive UI/UX design",
-                "Backend integration",
-                "App store deployment",
-              ],
-            },
-          ].map((card, idx) => (
+          {serviceCards.map((card, idx) => (
             <div key={idx} className="design-card">
               <h3>{card.title}</h3>
               <ul>
@@ -91,7 +94,7 @@ function Home() {
                 className="inquiry-button"
                 onClick={() => navigate("/contact-us")}
               >
-                Inquire
+                {t("home.inquireButton")}
               </button>
             </div>
           ))}
@@ -99,24 +102,14 @@ function Home() {
       </section>
 
       <section className="about-preview center-content">
-        <h2>About Us</h2>
-        <p>
-          Framenta is a web development studio focused on turning your ideas
-          into beautifully interactive websites.
-        </p>
-        <p>
-          Our team specializes in modern front-end technologies, building
-          responsive, lightning-fast websites that not only look stunning but
-          also perform seamlessly across all devices.
-        </p>
-        <p>
-          At Framenta, every line of code is written with care, every layout is
-          pixel-perfect, and every interaction is purposeful.
-        </p>
+        <h2>{t("home.aboutTitle")}</h2>
+        <p>{t("home.aboutPara1")}</p>
+        <p>{t("home.aboutPara2")}</p>
+        <p>{t("home.aboutPara3")}</p>
       </section>
 
       <section className="centered-section center-content">
-        <h2>Technologies We Use</h2>
+        <h2>{t("home.technologiesTitle")}</h2>
         <div className="tech-icons">
           <FaHtml5 title="HTML5" />
           <FaCss3Alt title="CSS3" />
@@ -141,42 +134,53 @@ function Home() {
       </a>
 
       <section className="our-work-card-section">
-        <h2>Our Work</h2>
+        <h2>{t("home.ourWorkTitle")}</h2>
         <div className="our-work-card">
-          <h3>Check Out Our Projects</h3>
-          <p>
-            We take pride in delivering modern, responsive, and user-friendly
-            websites. Explore our featured work to see the creativity and
-            functionality we bring to life.
-          </p>
-          <button onClick={() => navigate("/our-work")}>View Projects</button>
+          <h3>{t("home.projectsTitle")}</h3>
+          <p>{t("home.projectsDescription")}</p>
+          <button onClick={() => navigate("/our-work")}>
+            {t("home.viewProjectsButton")}
+          </button>
         </div>
       </section>
 
       <section className="home-contact-form center-content">
-        <h2 style={{ marginBottom: "1rem" }}>
-          Need a Website, Contact Us Today !
-        </h2>
+        <h2 style={{ marginBottom: "1rem" }}>{t("home.contactTitle")}</h2>
         <form
           action="https://formspree.io/f/xblgelrb"
           method="POST"
           className="contact-form"
         >
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="phone" name="phone" placeholder="Your Phone" required />
+          <input
+            type="text"
+            name="name"
+            placeholder={t("form.name")}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder={t("form.email")}
+            required
+          />
+          <input
+            type="phone"
+            name="phone"
+            placeholder={t("form.phone")}
+            required
+          />
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder={t("form.message")}
             rows="5"
             required
           />
-          <button type="submit">Send Message</button>
+          <button type="submit">{t("form.send")}</button>
         </form>
       </section>
 
       <footer className="footer-note center-content">
-        Made with <span className="heart">♥</span> in Riyadh
+        {t("home.footerText")}
         <div style={{ marginTop: "1rem", fontWeight: "bold" }}></div>
       </footer>
     </>

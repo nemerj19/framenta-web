@@ -72,3 +72,12 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* RTL/LTR direction-based text alignment */
+body[dir="rtl"] {
+  text-align: right;
+}
+
+body[dir="ltr"] {
+  text-align: left;
+}

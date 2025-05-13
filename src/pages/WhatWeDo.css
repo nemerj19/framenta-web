@@ -104,23 +104,23 @@
 }
 
 .service-card:nth-child(1) {
-  background: linear-gradient(135deg, #16c1ff, #007cf0);
+  background: linear-gradient(135deg, #ff5900, #e94057);
 }
 
 .service-card:nth-child(2) {
-  background: linear-gradient(135deg, #f27121, #e94057);
+  background: linear-gradient(135deg, #ff5900, #e94057);
 }
 
 .service-card:nth-child(3) {
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  background: linear-gradient(135deg, #ff5900, #e94057);
 }
 
 .service-card:nth-child(4) {
-  background: linear-gradient(135deg, #00a72f, #92fe9d);
+  background: linear-gradient(135deg, #ff5900, #e94057);
 }
 
 .service-card:nth-child(5) {
-  background: linear-gradient(135deg, #f7971e, #ffd200);
+  background: linear-gradient(135deg, #ff5900, #e94057);
 }
 
 .service-card:hover {
@@ -130,7 +130,7 @@
 .service-card:nth-child(6) {
   background: linear-gradient(
     135deg,
-    #6a11cb,
-    #2575fc
+    #ff5900,
+    #e94057
   ); /* purple-blue gradient */
 }

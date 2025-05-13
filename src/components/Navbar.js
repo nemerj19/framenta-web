@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation(); // 🈯️ Initialize translation
 
-  // Toggle the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close the menu when a link is clicked
   const closeMenu = () => {
     setIsOpen(false);
   };
@@ -19,30 +20,31 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          <div>
-            <span className="logo-rest">framenta</span>
-          </div>
+          <span className="logo-rest">framenta</span>
         </Link>
 
         <div className="desktop-links">
           <Link to="/" onClick={closeMenu}>
-            Home
+            {t("nav.home")}
           </Link>
           <Link to="/who-we-are" onClick={closeMenu}>
-            About Us
+            {t("nav.whoWeAre")}
           </Link>
           <Link to="/what-we-do" onClick={closeMenu}>
-            Our Services
+            {t("nav.whatWeDo")}
           </Link>
           <Link to="/our-work" onClick={closeMenu}>
-            Our Work
+            {t("nav.ourWork")}
           </Link>
           <Link to="/contact-us" onClick={closeMenu}>
-            Contact Us
+            {t("nav.contact")}
           </Link>
+
+          {/* 🌐 Language switcher on desktop */}
+          <LanguageSwitcher />
         </div>
 
-        {/* Mobile Hamburger Icon */}
+        {/* 🍔 Mobile Hamburger Icon */}
         <div className="hamburger-icon" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -50,23 +52,28 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Sidebar for mobile */}
+      {/* 📱 Mobile Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <Link to="/" onClick={closeMenu}>
-          Home
+          {t("nav.home")}
         </Link>
         <Link to="/who-we-are" onClick={closeMenu}>
-          About Us
+          {t("nav.whoWeAre")}
         </Link>
         <Link to="/what-we-do" onClick={closeMenu}>
-          Our Services
+          {t("nav.whatWeDo")}
         </Link>
         <Link to="/our-work" onClick={closeMenu}>
-          Our Work
+          {t("nav.ourWork")}
         </Link>
         <Link to="/contact-us" onClick={closeMenu}>
-          Contact Us
+          {t("nav.contact")}
         </Link>
+
+        {/* 🌐 Language switcher on mobile */}
+        <div style={{ marginTop: "1rem" }}>
+          <LanguageSwitcher />
+        </div>
       </div>
 
       {isOpen && <div className="backdrop" onClick={toggleMenu} />}

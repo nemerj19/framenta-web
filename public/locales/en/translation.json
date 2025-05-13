@@ -1,0 +1,82 @@
+{
+  "home": {
+    "servicesTitle": "Our Services",
+    "inquireButton": "Inquire",
+    "aboutTitle": "About Us",
+    "aboutPara1": "Framenta is a web development studio focused on turning your ideas into beautifully interactive websites.",
+    "aboutPara2": "Our team specializes in modern front-end technologies, building responsive, lightning-fast websites that not only look stunning but also perform seamlessly across all devices.",
+    "aboutPara3": "At Framenta, every line of code is written with care, every layout is pixel-perfect, and every interaction is purposeful.",
+    "technologiesTitle": "Technologies We Use",
+    "ourWorkTitle": "Our Work",
+    "projectsTitle": "Check Out Our Projects",
+    "projectsDescription": "We take pride in delivering modern, responsive, and user-friendly websites. Explore our featured work to see the creativity and functionality we bring to life.",
+    "viewProjectsButton": "View Projects",
+    "contactTitle": "Need a Website? Contact Us Today!",
+    "footerText": "Made with ♥ in Riyadh"
+  },
+  "form": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Your Phone",
+    "message": "Your Message",
+    "send": "Send Message"
+  },
+  "services": {
+    "basic": {
+      "title": "Basic Web Design",
+      "feature1": "Choose from prebuilt creative designs",
+      "feature2": "Edit chosen design",
+      "feature3": "Design simple logo",
+      "feature4": "Build site content"
+    },
+    "advanced": {
+      "title": "Advanced Web Design",
+      "feature1": "Custom creative design for homepage",
+      "feature2": "Logo design",
+      "feature3": "Build site content",
+      "feature4": "Build professional forms"
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "feature1": "Research-driven interface design",
+      "feature2": "User journey mapping",
+      "feature3": "Wireframes and mockups",
+      "feature4": "Pixel-perfect visual design"
+    },
+    "domain": {
+      "title": "Domain & Hosting",
+      "feature1": "Help register your domain",
+      "feature2": "Fast & secure hosting setup",
+      "feature3": "Free SSL certificate",
+      "feature4": "Website backups & support"
+    },
+    "seo": {
+      "title": "SEO Services",
+      "feature1": "Comprehensive website audit",
+      "feature2": "On-page & off-page optimization",
+      "feature3": "Keyword research & analysis",
+      "feature4": "Google Search Console setup"
+    },
+    "app": {
+      "title": "App Development",
+      "feature1": "Cross-platform mobile apps",
+      "feature2": "Intuitive UI/UX design",
+      "feature3": "Backend integration",
+      "feature4": "App store deployment"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "whoWeAre": "About Us",
+    "whatWeDo": "Our Services",
+    "ourWork": "Our Work",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "address": "Address",
+    "city": "Riyadh,",
+    "country": "Kingdom of Saudi Arabia",
+    "email": "Email",
+    "social": "Social Media"
+  }
+}

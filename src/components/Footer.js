@@ -1,7 +1,11 @@
 import React from "react";
-import { FaLinkedin, FaInstagram } from "react-icons/fa"; // Import icons for LinkedIn and Instagram
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher"; // Adjust path if needed
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer
       style={{
@@ -10,8 +14,8 @@ function Footer() {
         padding: "1.4rem 0",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between", // Makes sure the content is spaced evenly
-        minHeight: "200px", // Ensures the footer takes up enough space
+        justifyContent: "space-between",
+        minHeight: "200px",
       }}
     >
       <div
@@ -21,15 +25,17 @@ function Footer() {
           justifyContent: "space-between",
         }}
       >
-        {/* Left-aligned section */}
         <div style={{ maxWidth: "50%", marginLeft: "2rem" }}>
+          {/* Language Switcher (Flags) */}
+          <LanguageSwitcher />
+
           {/* Address */}
-          <h3 style={{ marginBottom: "0.5rem" }}>Address</h3>
-          <p style={{ margin: 0 }}>Riyadh,</p>
-          <p style={{ marginBottom: "1.5rem" }}>Kingdom of Saudi Arabia</p>
+          <h3 style={{ marginBottom: "0.5rem" }}>{t("footer.address")}</h3>
+          <p style={{ margin: 0 }}>{t("footer.city")}</p>
+          <p style={{ marginBottom: "1.5rem" }}>{t("footer.country")}</p>
 
           {/* Email */}
-          <h3 style={{ marginBottom: "0.5rem" }}>Email</h3>
+          <h3 style={{ marginBottom: "0.5rem" }}>{t("footer.email")}</h3>
           <p style={{ marginBottom: "1.5rem" }}>
             <a
               href="mailto:contact@framenta.com"
@@ -40,7 +46,7 @@ function Footer() {
           </p>
 
           {/* Social Media */}
-          <h3 style={{ marginBottom: "1rem" }}>Social Media</h3>
+          <h3 style={{ marginBottom: "1rem" }}>{t("footer.social")}</h3>
           <div style={{ marginBottom: "1.5rem" }}>
             <a
               href="https://www.linkedin.com"
@@ -62,15 +68,15 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright text centered at the bottom */}
+      {/* Footer text */}
       <div
         style={{
           textAlign: "center",
           marginTop: "2rem",
-          marginBottom: "1rem", // Adds space at the bottom
+          marginBottom: "1rem",
         }}
       >
-        <p>© 2025 Framenta. All rights reserved.</p>
+        <p>{t("home.footerText")}</p>
       </div>
     </footer>
   );
