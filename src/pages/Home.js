@@ -1,5 +1,8 @@
 import React from "react";
 import "../components/Home.css";
+import desktopEn from "../assets/images/frontt.png";
+import desktopAr from "../assets/images/arabic.png";
+
 import { FaGithub, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +10,10 @@ import { useTranslation } from "react-i18next";
 
 function Home() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation(); // ✅ added i18n
+
+  // ✅ Choose the image based on the current language
+  const selectedImage = i18n.language === "ar" ? desktopAr : desktopEn;
 
   const serviceCards = [
     {
@@ -70,7 +76,7 @@ function Home() {
     <>
       <div className="hero-image-wrapper">
         <img
-          src="/images/frontt.png"
+          src={selectedImage} // ✅ updated here
           alt="Framenta - Creative Web Design"
           className="hero-image"
         />
@@ -179,10 +185,10 @@ function Home() {
         </form>
       </section>
 
-      <footer className="footer-note center-content">
+      {/* <footer className="footer-note center-content">
         {t("home.footerText")}
         <div style={{ marginTop: "1rem", fontWeight: "bold" }}></div>
-      </footer>
+      </footer> */}
     </>
   );
 }
