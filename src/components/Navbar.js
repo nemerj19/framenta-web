@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import LanguageSwitcher from "./LanguageSwitcher";
+import logo from "../assets/images/logo.png"; // Your logo image
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation(); // 🈯️ Initialize translation
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,8 +20,8 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <Link to="/" className="logo">
-          <span className="logo-rest">framenta</span>
+        <Link to="/" className="logo" onClick={closeMenu}>
+          <img src={logo} alt="Framenta Logo" style={{ height: "30px" }} />
         </Link>
 
         <div className="desktop-links">
