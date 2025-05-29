@@ -1,15 +1,27 @@
 /* Navbar Container */
 .navbar {
-  background-color: #140c5c;
-  color: white;
-  padding: 0.5rem 1.6rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, links right */
   align-items: center;
-  z-index: 1000;
+  padding: 0.75rem 2rem;
   position: fixed;
   width: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #140c5c; /* fully opaque */
+
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.desktop-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 /* Logo text style */
@@ -121,4 +133,14 @@
   .desktop-links {
     display: none;
   }
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional for a subtle separator */
 }

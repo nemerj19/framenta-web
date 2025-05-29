@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import LanguageSwitcher from "./LanguageSwitcher";
-import logo from "../assets/images/logo.png"; // Your logo image
+import logo from "../assets/images/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +24,7 @@ function Navbar() {
           <img src={logo} alt="Framenta Logo" style={{ height: "30px" }} />
         </Link>
 
+        {/* 🖥️ Desktop Links */}
         <div className="desktop-links">
           <Link to="/" onClick={closeMenu}>
             {t("nav.home")}
@@ -40,44 +41,43 @@ function Navbar() {
           <Link to="/contact-us" onClick={closeMenu}>
             {t("nav.contact")}
           </Link>
-
-          {/* 🌐 Language switcher on desktop */}
           <LanguageSwitcher />
         </div>
 
-        {/* 🍔 Mobile Hamburger Icon */}
+        {/* 📱 Hamburger Icon for Mobile */}
         <div className="hamburger-icon" onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
         </div>
       </nav>
 
-      {/* 📱 Mobile Sidebar */}
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <Link to="/" onClick={closeMenu}>
-          {t("nav.home")}
-        </Link>
-        <Link to="/who-we-are" onClick={closeMenu}>
-          {t("nav.whoWeAre")}
-        </Link>
-        <Link to="/what-we-do" onClick={closeMenu}>
-          {t("nav.whatWeDo")}
-        </Link>
-        <Link to="/our-work" onClick={closeMenu}>
-          {t("nav.ourWork")}
-        </Link>
-        <Link to="/contact-us" onClick={closeMenu}>
-          {t("nav.contact")}
-        </Link>
-
-        {/* 🌐 Language switcher on mobile */}
-        <div style={{ marginTop: "1rem" }}>
-          <LanguageSwitcher />
-        </div>
-      </div>
-
-      {isOpen && <div className="backdrop" onClick={toggleMenu} />}
+      {/* 📱 Sidebar (Mobile Only) */}
+      {isOpen && (
+        <>
+          <div className="sidebar open">
+            <Link to="/" onClick={closeMenu}>
+              {t("nav.home")}
+            </Link>
+            <Link to="/who-we-are" onClick={closeMenu}>
+              {t("nav.whoWeAre")}
+            </Link>
+            <Link to="/what-we-do" onClick={closeMenu}>
+              {t("nav.whatWeDo")}
+            </Link>
+            <Link to="/our-work" onClick={closeMenu}>
+              {t("nav.ourWork")}
+            </Link>
+            <Link to="/contact-us" onClick={closeMenu}>
+              {t("nav.contact")}
+            </Link>
+            <div style={{ marginTop: "1rem" }}>
+              <LanguageSwitcher />
+            </div>
+          </div>
+          <div className="backdrop" onClick={toggleMenu} />
+        </>
+      )}
     </>
   );
 }
