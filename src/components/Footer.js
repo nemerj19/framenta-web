@@ -38,7 +38,7 @@ function Footer() {
           <h3 style={{ marginBottom: "0.5rem" }}>{t("footer.email")}</h3>
           <p style={{ marginBottom: "1.5rem" }}>
             <a
-              href="mailto:contact@framenta.com"
+              href="mailto:framenta.sa@gmail.com"
               style={{ color: "#fff", textDecoration: "none" }}
             >
               contact@framenta.com

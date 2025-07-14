@@ -502,3 +502,24 @@ textarea::placeholder {
 .hero-image {
   margin-top: 45px;
 }
+
+.hero-image {
+  max-height: 1200px;
+  object-fit: cover;
+  width: 55%;
+  display: block;
+  margin: 0 auto; /* centers the image */
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero-image {
+    max-height: none; /* remove fixed height */
+    width: 90%; /* wider on small screens */
+    object-fit: contain; /* show whole image inside */
+  }
+}
+
+.hero-image-wrapper {
+  padding-top: 65px; /* or your navbar height */
+}

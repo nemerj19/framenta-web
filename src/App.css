@@ -81,3 +81,7 @@ body[dir="rtl"] {
 body[dir="ltr"] {
   text-align: left;
 }
+
+html {
+  scroll-behavior: smooth;
+}
