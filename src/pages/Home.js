@@ -27,6 +27,32 @@ function Home() {
         <WhatWeDo />
       </section>
 
+      <section className="device-preview-section center-content">
+        <h2 data-aos="fade-up">Website Preview</h2>
+
+        {/* Desktop Preview */}
+        <div className="device-card" data-aos="zoom-in" data-aos-delay="200">
+          <img
+            src={require("../assets/images/desktop-preview.png")}
+            alt="Desktop View"
+            className="desktop-img"
+          />
+          <p>Desktop View</p>
+        </div>
+
+        {/* Mobile Preview */}
+        <div className="device-card" data-aos="zoom-in" data-aos-delay="200">
+          <div className="samsung-frame">
+            <img
+              src={require("../assets/images/mobile-preview.png")}
+              alt="Mobile View"
+              className="samsung-img"
+            />
+          </div>
+          <p>Mobile (Samsung S22) View</p>
+        </div>
+      </section>
+
       <section id="about">
         <WhoWeAre />
       </section>
