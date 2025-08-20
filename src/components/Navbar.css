@@ -3,11 +3,10 @@
   display: flex;
   justify-content: space-between; /* logo left, links right */
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2.5rem;
   position: fixed;
   width: 100%;
   background-color: #140c5c; /* fully opaque */
-
   z-index: 1000;
 }
 
@@ -32,23 +31,38 @@
   text-decoration: none;
 }
 
-/* If you want hover effect on the logo */
 .logo-rest:hover {
   color: #00bfff; /* Change to any color you prefer */
 }
 
-/* Adjust navbar links if necessary */
-.desktop-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-family: "Poppins", sans-serif;
-  transition: color 0.3s;
+/* Desktop nav links container */
+.desktop-links {
+  display: flex;
+  gap: 1rem;
 }
 
-/* .desktop-links a:hover {
-  color: #5eacff;
-} */
+/* Each nav link styled as pill */
+.desktop-links a {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* full pill shape */
+  background-color: #211979; /* default background (red in your theme) */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect - fade to darker color + slight scale */
+.desktop-links a:hover {
+  background-color: #755092; /* darker shade */
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* Remove underline effect */
+.desktop-links a::after {
+  display: none;
+}
 
 /* Mobile Hamburger Icon */
 .hamburger-icon {
@@ -114,27 +128,7 @@
   }
 }
 
-.desktop-links {
-  display: flex;
-  gap: 1.5rem; /* Adds horizontal space between nav links */
-  align-items: center;
-}
-
-/* Show only on desktop */
-@media (min-width: 768px) {
-  .desktop-links {
-    display: flex;
-    gap: 2rem;
-  }
-}
-
-/* Hide on mobile if needed */
-@media (max-width: 767px) {
-  .desktop-links {
-    display: none;
-  }
-}
-
+/* Sidebar link style */
 .sidebar a {
   display: block;
   padding: 15px 20px;
@@ -142,5 +136,5 @@
   text-decoration: none;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional for a subtle separator */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }

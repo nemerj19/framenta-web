@@ -21,7 +21,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <a href="#hero" className="logo" onClick={closeMenu}>
-          <img src={logo} alt="Framenta Logo" style={{ height: "30px" }} />
+          <img src={logo} alt="Framenta Logo" style={{ height: "40px" }} />
         </a>
 
         <div className="desktop-links">

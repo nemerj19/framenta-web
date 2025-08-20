@@ -1,532 +1,64 @@
-/* Home Page Styles */
-.home-container {
-  text-align: center;
-  padding: 3rem;
-  background: linear-gradient(
-    135deg,
-    #000000,
-    #0a41a0
-  ); /* Gradient Background */
-  color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
+/* Home.css - Enhanced Animated & Cool Version */
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-.cta-button {
-  padding: 15px 30px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #2980b9;
-  transform: scale(1.05);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .home-container {
-    padding: 2rem;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 12px 25px;
-  }
-}
-
-.logo {
-  font-family: "Poppins", sans-serif;
-}
-
-.footer-note {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 1rem;
-  color: #ccc;
-  font-family: "Poppins", sans-serif;
-}
-
-.heart {
-  color: #ff6b6b;
-  margin: 0 0.3rem;
-}
-
-.tech-icons {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 2.5rem;
-  justify-content: center;
-  color: #ffffff;
-}
-
-.tech-icons svg[title="GitHub"] {
-  color: #ffffff; /* Or use #333 or #6e5494 if you prefer the GitHub brand tone */
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  background-color: #25d366;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.whatsapp-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.tech-icons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  color: #ff9b4f; /* or your accent color */
-}
-
-.tech-icons svg:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
-.what-we-offer {
-  margin-bottom: 4rem; /* Adds space below this section */
-}
-
-.about-us {
-  margin-bottom: 4rem; /* Optional: if you want space before the next */
-}
-
-.features-section,
-.about-preview,
-.tech-stack {
-  margin-bottom: 3rem; /* or adjust as you like */
-}
-
-.logo-f {
-  color: #ff6a00; /* orange/red or pick your color */
-  font-weight: bold;
-}
-
-.logo-rest {
-  color: #a1b0ff; /* bluish or secondary tone */
-  font-weight: bold;
-}
-
-.hero-video-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.video-overlay {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-top: 20vh;
-  color: white;
-  backdrop-filter: blur(2px);
-}
-
-.video-overlay h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.video-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.welcome-card h1 {
-  font-size: 2rem; /* Try 2rem or smaller based on how compact you want it */
-  margin-bottom: 0.5rem; /* Optional: tighter spacing */
-}
-
-.welcome-card p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.hero-video-container {
-  width: 100%;
-  height: 70vh; /* adjust based on design */
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-video {
-  width: 100%;
-  height: 70%;
-  object-fit: cover; /* removes black borders by cropping if needed */
-}
-
-@media (max-width: 768px) {
-  .hero-video-container {
-    height: 50vh; /* smaller height for mobile */
-  }
-
-  .hero-video {
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-.web-design-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.design-card {
-  background-color: #ae4301;
-  border-radius: 10px;
-  padding: 20px;
-  flex: 1 1 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: rgb(255, 255, 255);
-}
-
-.design-card h3 {
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.design-card ul {
-  padding-left: 20px;
-}
-
-.design-card li {
-  margin-bottom: 8px;
-}
-
-.inquiry-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #7ba7b6;
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.inquiry-button:hover {
-  background-color: #00bfa6;
-}
-
-.spaced-section {
-  margin-top: 60px; /* Adjust as needed */
-}
-
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.design-card {
-  flex: 1 1 300px;
-  background: linear-gradient(135deg, #d93333, #1d457a); /* Default gradient */
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.design-card:hover {
-  transform: translateY(-5px);
-}
-
-.design-card h3 {
-  margin-bottom: 10px;
-}
-
-.design-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 15px;
-}
-
-.design-card ul li {
-  margin-bottom: 8px;
-}
-
-.design-card button {
-  background: white;
-  color: #333;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.design-card button:hover {
-  background: #f0f0f0;
-}
-
-.hero-slider {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-.slide-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .slide-image {
-    height: 350px; /* Adjust as needed */
-    object-fit: cover;
-  }
-}
-
-.offer-section {
-  padding-left: 40;
-}
-
-@media (min-width: 768px) {
-  .offer-section {
-    padding-left: 40px;
-  }
-}
-
-.offer-inner {
-  padding-left: 20px;
-}
-
-@media (min-width: 768px) {
-  .offer-inner {
-    padding-left: 40px;
-  }
-}
-
+/* Global container for hero */
 .hero-image-wrapper {
   width: 100%;
   overflow: hidden;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.home-offer {
-  height: 5vh; /* full screen height */
+  padding-top: 85px; /* navbar height */
+  padding-bottom: 10%;
   display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center; /* centers vertically */
-  text-align: center; /* centers text inside the element */
-}
-
-.home-offer h2 {
-  font-size: 1.5rem;
-  color: #ffffff; /* or any color that fits your theme */
-}
-
-.home-contact-form {
-  margin-top: 0.1rem;
-  padding: 2rem;
-  background-color: #140c5c;
-  color: white;
-  text-align: center;
-}
-
-/* ContactUs.css or your home CSS file */
-
-input,
-textarea {
-  padding: 0.6rem;
-  border: 1px solid black; /* ✅ Black border */
-  border-radius: 6px;
-  background-color: #2f2591; /* ✅ Light background */
-  color: #ffffff; /* Black text */
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #ffffff; /* Softer placeholder */
-}
-
-.contact-form {
-  margin-top: 0.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3.2rem;
-  background-color: #2f2591; /* Optional: background for the whole form area */
-  border: 1px solid black; /* Black border for the form container */
-  border-radius: 8px;
-}
-
-.contact-form button {
-  padding: 1rem;
-  background-color: #6e5eff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #45a049;
-}
-
-.center-content {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.cta-footer {
-  margin-top: 2rem; /* or adjust as needed */
-  padding: 2rem 1rem;
-}
-
-.contact-form {
-  max-width: 400px; /* You can increase this to e.g. 650px if needed */
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: #140c5c;
-  border: 2px solid black;
-  border-radius: 8px;
-}
-
-.our-work-card-section {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #140c5c;
-  color: #fff;
-}
-
-.our-work-card {
-  margin-top: 1rem;
-  background-color: #001f6d;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.our-work-card h3 {
-  margin-bottom: 1rem;
-  color: #00ffe1;
-}
-
-.our-work-card p {
-  margin-bottom: 1.5rem;
-  color: #ccc;
-}
-
-.our-work-card button {
-  background-color: #00dfc4;
-  color: #121212;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.our-work-card button:hover {
-  background-color: #00c3b0;
+  animation: fadeIn 1.5s ease forwards;
+  background: linear-gradient(135deg, #140c5c, #140c5c); /* deep gradient */
 }
 
 .hero-image {
-  margin-top: 45px;
-}
-
-.hero-image {
+  width: 70%;
   max-height: 1200px;
   object-fit: cover;
-  width: 55%;
   display: block;
-  margin: 0 auto; /* centers the image */
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+  animation: floatWave 6s ease-in-out infinite;
 }
 
-/* Mobile fix */
-@media (max-width: 768px) {
-  .hero-image {
-    max-height: none; /* remove fixed height */
-    width: 90%; /* wider on small screens */
-    object-fit: contain; /* show whole image inside */
+.hero-image:hover {
+  transform: scale(1.08);
+}
+
+/* Floating/Waving Keyframes */
+@keyframes floatWave {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-1deg) scale(1.01);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(10px) rotate(1deg) scale(0.99);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
   }
 }
 
-.hero-image-wrapper {
-  padding-top: 65px; /* or your navbar height */
-}
-
+/* Device Preview Section */
 .device-preview-section {
   padding: 4rem 1rem;
   text-align: center;
+}
+
+.device-preview-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  animation: fadeUp 1s ease forwards;
 }
 
 .device-card {
@@ -537,23 +69,22 @@ textarea::placeholder {
   max-width: 320px;
   margin: 2rem auto;
   text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.device-card p {
-  margin-top: 0.8rem;
-  font-weight: 600;
-  color: #ffffff;
+.device-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Desktop style */
-.desktop-img {
+.desktop-img,
+.samsung-img {
   width: 100%;
   height: auto;
   border-radius: 12px;
   border: 2px solid #00dfc4;
 }
 
-/* Samsung S22-style */
 .samsung-frame {
   width: 200px;
   height: 430px;
@@ -568,10 +99,239 @@ textarea::placeholder {
   justify-content: center;
 }
 
-.samsung-img {
+/* Sections: About, Projects, Contact */
+#about,
+#projects,
+#contact {
+  padding: 4rem 2rem;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInSection 1.5s ease forwards;
+}
+
+#about,
+#projects {
+  background-color: #140c5c;
+}
+#contact {
+  background-color: #140c5c;
+  color: #fff;
+}
+
+/* Technologies Section Centered */
+.centered-section {
+  text-align: center; /* center heading */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center the icons horizontally */
+  justify-content: center;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2.5rem;
+  justify-content: center; /* center the icons */
+  align-items: center;
+  margin-top: 2rem;
+  color: #ff9b4f;
+}
+
+.tech-icons svg {
+  transition: transform 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.tech-icons svg:hover {
+  transform: scale(1.4) rotate(12deg);
+  color: #00dfc4;
+  animation: pulse 0.6s ease infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1.2) rotate(8deg);
+  }
+  to {
+    transform: scale(1.4) rotate(12deg);
+  }
+}
+
+/* Cards (Web design & Our work) */
+.design-card,
+.our-work-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.design-card:hover,
+.our-work-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.cta-button,
+.inquiry-button,
+.design-card button,
+.our-work-card button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.inquiry-button:hover,
+.design-card button:hover,
+.our-work-card button:hover {
+  transform: scale(1.08);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15) rotate(10deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Our Work Slider */
+.our-work-section {
+  padding: 4rem 2rem;
+  background-color: #140c5c;
+  color: #fff;
+  text-align: center;
+}
+
+.our-work-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.slide-card-wrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.slide-card {
+  background-color: #2f2591;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 350px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeZoom 0.8s forwards, floatWave 6s ease-in-out infinite;
+}
+
+.slide-card img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 32px;
-  background-color: #000000;
+  border-radius: 8px;
+}
+
+.slide-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.slide-card p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+}
+
+.slide-card-link {
+  color: #00bfff;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.slide-card-link:hover {
+  color: #00ffff;
+}
+
+/* Hide React Slick Arrows */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-image {
+    width: 90%;
+    object-fit: contain;
+    animation: floatWave 4s ease-in-out infinite;
+  }
+  .device-card {
+    max-width: 90%;
+  }
+  .tech-icons {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+  #about,
+  #projects,
+  #contact {
+    padding: 3rem 1rem;
+  }
+  .slide-card {
+    max-width: 90%;
+  }
 }
