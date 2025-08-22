@@ -335,3 +335,24 @@
     max-width: 90%;
   }
 }
+
+.hero-intro {
+  background: linear-gradient(135deg, #140c5c, #140c5c);
+  padding-top: 110px; /* offset navbar */
+  padding-bottom: 1.25rem;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-heading {
+  margin: 0;
+  font-weight: 800;
+  font-size: 3.2rem;
+}
+
+.hero-subheading {
+  margin: 0.5rem auto 0;
+  opacity: 0.9;
+  max-width: 900px;
+  font-size: clamp(0.95rem, 0.6vw + 0.85rem, 1.2rem);
+}

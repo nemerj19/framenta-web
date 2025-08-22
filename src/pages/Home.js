@@ -6,7 +6,7 @@ import desktopAr from "../assets/images/arabic.png";
 import { FaGithub, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion"; // ✅ Framer Motion import
+import { motion } from "framer-motion";
 import WhoWeAre from "./WhoWeAre";
 import WhatWeDo from "./WhatWeDO";
 import OurWork from "./OurWork";
@@ -16,7 +16,6 @@ function Home() {
   const { t, i18n } = useTranslation();
   const selectedImage = i18n.language === "ar" ? desktopAr : desktopEn;
 
-  // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -29,7 +28,20 @@ function Home() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* 🔹 Intro Text */}
+      <motion.section
+        className="hero-intro"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+      >
+        <h1 className="hero-heading">Welcome to Digital Web Design Services</h1>
+        {/* <p className="hero-subheading">
+          Crafting modern, responsive websites tailored for your business.
+        </p> */}
+      </motion.section>
+
+      {/* 🔹 Hero Section */}
       <section id="hero">
         <motion.div
           className="hero-image-wrapper"
@@ -58,7 +70,7 @@ function Home() {
         <WhoWeAre />
       </motion.section>
 
-      {/* Services Section */}
+      {/* Services */}
       <motion.section
         id="services"
         initial="hidden"
@@ -69,7 +81,7 @@ function Home() {
         <WhatWeDo />
       </motion.section>
 
-      {/* Device Preview Section */}
+      {/* Device Preview */}
       <motion.section
         className="device-preview-section center-content"
         initial="hidden"
@@ -105,17 +117,6 @@ function Home() {
           <p>Mobile (Samsung S22) View</p>
         </motion.div>
       </motion.section>
-
-      {/* About Us
-      <motion.section
-        id="about"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <WhoWeAre />
-      </motion.section> */}
 
       {/* Projects */}
       <motion.section
@@ -159,7 +160,7 @@ function Home() {
         <ContactUs />
       </motion.section>
 
-      {/* WhatsApp Float */}
+      {/* WhatsApp Button */}
       <a
         href="https://wa.me/966576404358"
         className="whatsapp-float"
