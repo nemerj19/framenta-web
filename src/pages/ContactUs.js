@@ -6,7 +6,7 @@ function ContactUs() {
       <h2
         style={{
           textAlign: "center",
-          fontSize: "2.5rem",
+          fontSize: "3.5rem",
           color: "#ffffff",
           marginBottom: "2rem",
           marginTop: "2rem",

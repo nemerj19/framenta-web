@@ -160,7 +160,7 @@ function Home() {
         <ContactUs />
       </motion.section>
 
-      {/* WhatsApp Button */}
+      {/* WhatsApp Button
       <a
         href="https://wa.me/966576404358"
         className="whatsapp-float"
@@ -172,7 +172,7 @@ function Home() {
           alt="WhatsApp"
           className="whatsapp-icon"
         />
-      </a>
+      </a> */}
     </>
   );
 }

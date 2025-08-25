@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher"; // Adjust path if needed
 
@@ -41,7 +41,7 @@ function Footer() {
               href="mailto:framenta.sa@gmail.com"
               style={{ color: "#fff", textDecoration: "none" }}
             >
-              contact@framenta.com
+              framenta.sa@gmail.com
             </a>
           </p>
 
@@ -63,6 +63,15 @@ function Footer() {
               style={{ color: "#fff", margin: "0 1rem" }}
             >
               <FaInstagram size={30} />
+            </a>
+
+            <a
+              href="https://api.whatsapp.com/send/?phone=966576404358&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#fff", margin: "0 1rem" }}
+            >
+              <FaWhatsapp size={30} />
             </a>
           </div>
         </div>

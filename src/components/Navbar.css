@@ -3,10 +3,10 @@
   display: flex;
   justify-content: space-between; /* logo left, links right */
   align-items: center;
-  padding: 1.8rem 2.5rem;
+  padding: 1.6rem 2.5rem;
   position: fixed;
   width: 100%;
-  background-color: #140c5c; /* fully opaque */
+  background-color: #09033f; /* fully opaque */
   z-index: 1000;
 }
 
@@ -46,7 +46,7 @@
 .desktop-links a {
   padding: 0.5rem 1rem;
   border-radius: 9999px; /* full pill shape */
-  background-color: #211979; /* default background (red in your theme) */
+  background-color: #140f50; /* default background (red in your theme) */
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -97,7 +97,7 @@
     right: -250px; /* Position it off-screen initially */
     width: 250px;
     height: 100%;
-    background-color: #140c5c;
+    background-color: #0a0537;
     transition: right 0.3s ease-in-out;
     z-index: 1001;
   }

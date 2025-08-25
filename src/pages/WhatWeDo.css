@@ -42,7 +42,7 @@
 .whatwedo-container {
   padding: 2rem;
   color: #ffffff;
-  background-color: #140c5c;
+  background-color: #09033f;
 }
 
 .whatwedo-title {
@@ -76,7 +76,7 @@
 .service-title {
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: #ffffff;
+  color: #bcd9ff;
 }
 
 .service-card svg {
@@ -104,23 +104,23 @@
 }
 
 .service-card:nth-child(1) {
-  background: linear-gradient(135deg, #ff5900, #e94057);
+  background: linear-gradient(135deg, #0e055c, #0e055c);
 }
 
 .service-card:nth-child(2) {
-  background: linear-gradient(135deg, #ff5900, #e94057);
+  background: linear-gradient(135deg, #0e055c, #0e055c);
 }
 
 .service-card:nth-child(3) {
-  background: linear-gradient(135deg, #ff5900, #e94057);
+  background: linear-gradient(135deg, #0e055c, #0e055c);
 }
 
 .service-card:nth-child(4) {
-  background: linear-gradient(135deg, #ff5900, #e94057);
+  background: linear-gradient(135deg, #0e055c, #0e055c);
 }
 
 .service-card:nth-child(5) {
-  background: linear-gradient(135deg, #ff5900, #e94057);
+  background: linear-gradient(135deg, #0e055c, #0e055c);
 }
 
 .service-card:hover {
@@ -130,7 +130,7 @@
 .service-card:nth-child(6) {
   background: linear-gradient(
     135deg,
-    #ff5900,
-    #e94057
+    #0e055c,
+    #0e055c
   ); /* purple-blue gradient */
 }
