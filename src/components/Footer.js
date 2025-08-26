@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#1e1e1e",
+        backgroundColor: "#000000",
         color: "#fff",
         padding: "1.4rem 0",
         display: "flex",

@@ -1,4 +1,3 @@
-// Home.js
 import React from "react";
 import "../components/Home.css";
 import desktopEn from "../assets/images/frontt.png";
@@ -28,20 +27,17 @@ function Home() {
 
   return (
     <>
-      {/* 🔹 Intro Text */}
+      {/* Hero Intro */}
       <motion.section
         className="hero-intro"
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
       >
-        <h1 className="hero-heading">Welcome to Digital Web Design Services</h1>
-        {/* <p className="hero-subheading">
-          Crafting modern, responsive websites tailored for your business.
-        </p> */}
+        <h1 className="hero-heading">{t("home.welcome")}</h1>
       </motion.section>
 
-      {/* 🔹 Hero Section */}
+      {/* Hero Image */}
       <section id="hero">
         <motion.div
           className="hero-image-wrapper"
@@ -89,7 +85,7 @@ function Home() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <h2>Website Preview</h2>
+        <h2>{t("home.projectsTitle")}</h2>
 
         <motion.div
           className="device-card"
@@ -97,10 +93,10 @@ function Home() {
         >
           <img
             src={require("../assets/images/desktop-preview.png")}
-            alt="Desktop View"
+            alt={t("home.desktopView")}
             className="desktop-img"
           />
-          <p>Desktop View</p>
+          <p>{t("home.desktopView")}</p>
         </motion.div>
 
         <motion.div
@@ -110,11 +106,11 @@ function Home() {
           <div className="samsung-frame">
             <img
               src={require("../assets/images/mobile-preview.png")}
-              alt="Mobile View"
+              alt={t("home.mobileView")}
               className="samsung-img"
             />
           </div>
-          <p>Mobile (Samsung S22) View</p>
+          <p>{t("home.mobileView")}</p>
         </motion.div>
       </motion.section>
 
@@ -159,20 +155,6 @@ function Home() {
       >
         <ContactUs />
       </motion.section>
-
-      {/* WhatsApp Button
-      <a
-        href="https://wa.me/966576404358"
-        className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
-          alt="WhatsApp"
-          className="whatsapp-icon"
-        />
-      </a> */}
     </>
   );
 }

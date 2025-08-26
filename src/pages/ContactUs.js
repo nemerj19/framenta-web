@@ -1,8 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function ContactUs() {
+  const { t } = useTranslation();
+
   return (
     <div style={{ maxWidth: "900px", margin: "0 auto", padding: "2rem" }}>
+      {/* Heading */}
       <h2
         style={{
           textAlign: "center",
@@ -12,7 +16,7 @@ function ContactUs() {
           marginTop: "2rem",
         }}
       >
-        Contact Us
+        {t("home.contactUsTitle")}
       </h2>
 
       {/* Contact Details */}
@@ -44,26 +48,26 @@ function ContactUs() {
         <input
           type="text"
           name="name"
-          placeholder="Your Name"
+          placeholder={t("form.name")}
           required
           style={inputStyle}
         />
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
+          placeholder={t("form.email")}
           required
           style={inputStyle}
         />
         <textarea
           name="message"
-          placeholder="Your Message"
+          placeholder={t("form.message")}
           rows="5"
           required
           style={inputStyle}
         ></textarea>
         <button type="submit" style={buttonStyle}>
-          Send
+          {t("form.send")}
         </button>
       </form>
     </div>
@@ -75,8 +79,8 @@ const inputStyle = {
   borderRadius: "6px",
   border: "1px solid #555",
   fontSize: "1rem",
-  backgroundColor: "#1e1e1e", // dark background
-  color: "#fff", // white text
+  backgroundColor: "#1e1e1e",
+  color: "#fff",
 };
 
 const buttonStyle = {

@@ -8,66 +8,98 @@ import {
   FaAppStoreIos,
 } from "react-icons/fa";
 import "./WhatWeDo.css";
+import { useTranslation } from "react-i18next";
 
 function WhatWeDo() {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: <FaLaptopCode size={40} color="#00dfc4" />,
+      title: t("services.basic.title"),
+      description:
+        t("services.basic.feature1") +
+        ", " +
+        t("services.basic.feature2") +
+        ", " +
+        t("services.basic.feature3") +
+        ", " +
+        t("services.basic.feature4"),
+    },
+    {
+      icon: <FaMobileAlt size={40} color="#00dfc4" />,
+      title: t("services.advanced.title"),
+      description:
+        t("services.advanced.feature1") +
+        ", " +
+        t("services.advanced.feature2") +
+        ", " +
+        t("services.advanced.feature3") +
+        ", " +
+        t("services.advanced.feature4"),
+    },
+    {
+      icon: <FaShoppingCart size={40} color="#00dfc4" />,
+      title: t("services.seo.title"),
+      description:
+        t("services.seo.feature1") +
+        ", " +
+        t("services.seo.feature2") +
+        ", " +
+        t("services.seo.feature3") +
+        ", " +
+        t("services.seo.feature4"),
+    },
+    {
+      icon: <FaTachometerAlt size={40} color="#00dfc4" />,
+      title: t("services.domain.title"),
+      description:
+        t("services.domain.feature1") +
+        ", " +
+        t("services.domain.feature2") +
+        ", " +
+        t("services.domain.feature3") +
+        ", " +
+        t("services.domain.feature4"),
+    },
+    {
+      icon: <FaTools size={40} color="#00dfc4" />,
+      title: t("services.uiux.title"),
+      description:
+        t("services.uiux.feature1") +
+        ", " +
+        t("services.uiux.feature2") +
+        ", " +
+        t("services.uiux.feature3") +
+        ", " +
+        t("services.uiux.feature4"),
+    },
+    {
+      icon: <FaAppStoreIos size={40} color="#00dfc4" />,
+      title: t("services.app.title"),
+      description:
+        t("services.app.feature1") +
+        ", " +
+        t("services.app.feature2") +
+        ", " +
+        t("services.app.feature3") +
+        ", " +
+        t("services.app.feature4"),
+    },
+  ];
+
   return (
     <div className="whatwedo-container">
-      <h2 className="whatwedo-title">Our Services</h2>
+      <h2 className="whatwedo-title">{t("home.servicesTitle")}</h2>
 
       <div className="services-grid">
-        <div className="service-card">
-          <FaLaptopCode size={40} color="#00dfc4" />
-          <h3 className="service-title">Custom Website Development</h3>
-          <p>
-            We create tailored websites that are beautiful, functional, and easy
-            to manage.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <FaMobileAlt size={40} color="#00dfc4" />
-          <h3 className="service-title">Responsive Design</h3>
-          <p>
-            Our websites adapt seamlessly to any screen size, ensuring a great
-            experience on all devices.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <FaShoppingCart size={40} color="#00dfc4" />
-          <h3 className="service-title">E-commerce Integration</h3>
-          <p>
-            We help businesses set up powerful online stores with seamless
-            payment and product management.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <FaTachometerAlt size={40} color="#00dfc4" />
-          <h3 className="service-title">Performance Optimization</h3>
-          <p>
-            Speed is key. We optimize websites to ensure fast load times and
-            smooth navigation.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <FaTools size={40} color="#00dfc4" />
-          <h3 className="service-title">Maintenance & Support</h3>
-          <p>
-            Our job doesn't end after launch. We offer ongoing support to keep
-            your site running smoothly.
-          </p>
-        </div>
-
-        <div className="service-card">
-          <FaAppStoreIos size={40} color="#00dfc4" />
-          <h3 className="service-title">App Development</h3>
-          <p>
-            We build modern mobile applications for both Android and iOS
-            platforms with seamless performance and sleek design.
-          </p>
-        </div>
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
+            {service.icon}
+            <h3 className="service-title">{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -2,28 +2,29 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../components/Home.css"; // Make sure animations are in your CSS
+import "../components/Home.css"; // for styling
+import { useTranslation } from "react-i18next";
 
 function OurWork() {
+  const { t } = useTranslation();
+
   const projects = [
     {
-      title: "To-Do App",
+      title: t("projects.todo.title"),
       img: "/images/plan-for-tomorrow.png",
-      description:
-        "A minimal productivity app to manage daily tasks efficiently.",
+      description: t("projects.todo.description"),
       link: "https://github.com/nemerj19/plan-for-tomorrow",
     },
     {
-      title: "Travel Blog",
+      title: t("projects.travelBlog.title"),
       img: "/images/Travel-Blog.png",
-      description: "Shows real-time users sharing blogs about traveling.",
+      description: t("projects.travelBlog.description"),
       link: "https://github.com/nemerj19/blog-f-b",
     },
     {
-      title: "Client's Website",
+      title: t("projects.clientWebsite.title"),
       img: "/images/Rimstar .png",
-      description:
-        "A personal client's Website to showcase web design and development work.",
+      description: t("projects.clientWebsite.description"),
       link: "https://rimstarest.com",
     },
   ];
@@ -43,7 +44,7 @@ function OurWork() {
 
   return (
     <section className="our-work-section">
-      <h2 className="section-title">Our Work</h2>
+      <h2 className="section-title">{t("home.ourWorkTitle")}</h2>
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index} className="slide-card-wrapper">
@@ -61,7 +62,7 @@ function OurWork() {
                 rel="noopener noreferrer"
                 className="slide-card-link"
               >
-                View on GitHub
+                {t("projects.viewLink")}
               </a>
             </div>
           </div>

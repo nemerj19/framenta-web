@@ -1,19 +1,16 @@
 {
   "home": {
-    "servicesTitle": "Our Services",
-    "inquireButton": "Inquire",
-    "aboutTitle": "About Us",
-    "aboutPara1": "Framenta is a web development studio focused on turning your ideas into beautifully interactive websites.",
-    "aboutPara2": "Our team specializes in modern front-end technologies, building responsive, lightning-fast websites that not only look stunning but also perform seamlessly across all devices.",
-    "aboutPara3": "At Framenta, every line of code is written with care, every layout is pixel-perfect, and every interaction is purposeful.",
+    "welcome": "Welcome to Digital Web Design Services",
+    "projectsTitle": "Website Preview",
+    "desktopView": "Desktop View",
+    "mobileView": "Mobile (Samsung S22) View",
     "technologiesTitle": "Technologies We Use",
+    "servicesTitle": "Our Services",
     "ourWorkTitle": "Our Work",
-    "projectsTitle": "Check Out Our Projects",
-    "projectsDescription": "We take pride in delivering modern, responsive, and user-friendly websites. Explore our featured work to see the creativity and functionality we bring to life.",
-    "viewProjectsButton": "View Projects",
-    "contactTitle": "Need a Website? Contact Us Today!",
+    "contactUsTitle": "Contact Us",
     "footerText": "Made with ♥ in Riyadh"
   },
+
   "form": {
     "name": "Your Name",
     "email": "Your Email",
@@ -21,20 +18,21 @@
     "message": "Your Message",
     "send": "Send Message"
   },
+
   "services": {
     "basic": {
-      "title": "Basic Web Design",
+      "title": "Custom Website Development",
       "feature1": "Choose from prebuilt creative designs",
       "feature2": "Edit chosen design",
       "feature3": "Design simple logo",
       "feature4": "Build site content"
     },
     "advanced": {
-      "title": "Advanced Web Design",
-      "feature1": "Custom creative design for homepage",
-      "feature2": "Logo design",
-      "feature3": "Build site content",
-      "feature4": "Build professional forms"
+      "title": "Responsive Design",
+      "feature1": "Websites adapt to any screen size",
+      "feature2": "Seamless mobile experience",
+      "feature3": "Pixel-perfect layouts",
+      "feature4": "Fast-loading pages"
     },
     "uiux": {
       "title": "UI/UX Design",
@@ -65,6 +63,7 @@
       "feature4": "App store deployment"
     }
   },
+
   "nav": {
     "home": "Home",
     "whoWeAre": "About Us",
@@ -78,5 +77,40 @@
     "country": "Kingdom of Saudi Arabia",
     "email": "Email",
     "social": "Social Media"
+  },
+
+  "about": {
+    "title": "About Us",
+    "imageAlt": "Our Team",
+    "paragraph1": "At Framenta, a web design company based in Riyadh, under Reem Al Njoom Group, Nemer — a full-stack developer specializing in front-end development — leads a passionate team of web developers focused on delivering high-quality, custom websites.",
+    "paragraph2": "We are dedicated to crafting digital solutions that not only look amazing but also drive business success through enhanced user experience, performance, and scalability.",
+    "paragraph3": "Our approach blends creativity with cutting-edge technologies to ensure that every website we build is responsive, SEO-friendly, and tailored to meet our clients’ unique goals."
+  },
+
+  "work": {
+    "title": "Our Work",
+    "description": "A showcase of projects we have built for our clients."
+  },
+
+  "projects": {
+    "todo": {
+      "title": "To-Do App",
+      "description": "A minimal productivity app to manage daily tasks efficiently."
+    },
+    "travelBlog": {
+      "title": "Travel Blog",
+      "description": "Shows real-time users sharing blogs about traveling."
+    },
+    "clientWebsite": {
+      "title": "Client's Website",
+      "description": "A personal client's Website to showcase web design and development work."
+    },
+    "viewLink": "View on GitHub"
+  },
+
+  "contact": {
+    "phone": "+966 57 640 4358",
+    "email": "contact@framenta.com",
+    "address": "Riyadh, Kingdom of Saudi Arabia"
   }
 }
