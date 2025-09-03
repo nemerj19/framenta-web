@@ -94,18 +94,26 @@
 
   "projects": {
     "todo": {
-      "title": "To-Do App",
-      "description": "A minimal productivity app to manage daily tasks efficiently."
+      "title": "Plan For Tomorrow",
+      "description": "A modern todo app..."
     },
     "travelBlog": {
       "title": "Travel Blog",
-      "description": "Shows real-time users sharing blogs about traveling."
+      "description": "A blog to share..."
     },
     "clientWebsite": {
-      "title": "Client's Website",
-      "description": "A personal client's Website to showcase web design and development work."
+      "title": "React Web Design",
+      "description": "A live website..."
     },
-    "viewLink": "View on GitHub"
+    "alMuteriFrozenProducts": {
+      "title": "Web Design",
+      "description": "A personal portfolio built with React and Tailwind."
+    },
+    "jiwarGroupOfCompanies": {
+      "title": "Basic Web Design",
+      "description": "Basic Website made with react."
+    },
+    "viewLink": "View Project"
   },
 
   "contact": {

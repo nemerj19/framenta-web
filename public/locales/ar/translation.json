@@ -97,18 +97,25 @@
   },
 
   "projects": {
-    "todo": {
-      "title": "تطبيق المهام",
-      "description": "تطبيق إنتاجية بسيط لإدارة المهام اليومية بكفاءة."
-    },
-    "travelBlog": {
-      "title": "مدونة السفر",
-      "description": "عرض المستخدمين في الوقت الحقيقي لمشاركة المدونات عن السفر."
+    "alMuteriFrozenProducts": {
+      "title": "موقع بورتفوليو",
+      "description": "موقع شخصي مبني باستخدام React و Tailwind."
     },
     "clientWebsite": {
-      "title": "موقع العميل",
-      "description": "موقع ويب شخصي لعرض أعمال تصميم وتطوير المواقع."
+      "title": "موقع بورتفوليو",
+      "description": "موقع شخصي مبني باستخدام React و Tailwind."
     },
-    "viewLink": "عرض على GitHub"
+    "todo": {
+      "title": "موقع بورتفوليو",
+      "description": "موقع شخصي مبني باستخدام React و Tailwind."
+    },
+    "travelBlog": {
+      "title": "موقع بورتفوليو",
+      "description": "موقع شخصي مبني باستخدام React و Tailwind."
+    },
+    "jiwarGroupOfCompanies": {
+      "title": "تطبيق  ",
+      "description": "تطبيق تجارة إلكترونية كامل مع CRUD و الدفع الإلكتروني."
+    }
   }
 }

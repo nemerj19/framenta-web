@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
-import LanguageSwitcher from "./LanguageSwitcher";
+import { FaGlobe } from "react-icons/fa"; // Globe icon
 import logo from "../assets/images/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,6 +15,10 @@ function Navbar() {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "ar" : "en");
   };
 
   return (
@@ -40,7 +44,11 @@ function Navbar() {
           <a href="#contact" onClick={closeMenu}>
             {t("nav.contact")}
           </a>
-          <LanguageSwitcher />
+
+          {/* Globe icon for language switch */}
+          <button onClick={toggleLanguage} className="lang-toggle">
+            <FaGlobe size={20} />
+          </button>
         </div>
 
         <div className="hamburger-icon" onClick={toggleMenu}>
@@ -68,9 +76,15 @@ function Navbar() {
             <a href="#contact" onClick={closeMenu}>
               {t("nav.contact")}
             </a>
-            <div style={{ marginTop: "1rem" }}>
-              <LanguageSwitcher />
-            </div>
+
+            {/* Globe icon inside sidebar */}
+            <button
+              onClick={toggleLanguage}
+              className="lang-toggle"
+              style={{ marginTop: "1rem" }}
+            >
+              <FaGlobe size={20} />
+            </button>
           </div>
           <div className="backdrop" onClick={toggleMenu} />
         </>

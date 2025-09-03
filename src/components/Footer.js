@@ -1,7 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher"; // Adjust path if needed
 
 function Footer() {
   const { t } = useTranslation();
@@ -27,7 +26,7 @@ function Footer() {
       >
         <div style={{ maxWidth: "50%", marginLeft: "2rem" }}>
           {/* Language Switcher (Flags) */}
-          <LanguageSwitcher />
+          {/* <LanguageSwitcher /> */}
 
           {/* Address */}
           <h3 style={{ marginBottom: "0.5rem" }}>{t("footer.address")}</h3>

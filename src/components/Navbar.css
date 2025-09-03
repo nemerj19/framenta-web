@@ -139,3 +139,17 @@
   font-family: "Poppins", sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.lang-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-left: 1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lang-toggle:hover {
+  transform: scale(1.2);
+  color: #00dfc4;
+}
